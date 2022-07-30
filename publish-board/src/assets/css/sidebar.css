@@ -1,0 +1,11 @@
+.boardTitle {
+    background-color: #efefef;
+    padding: 6px;
+}
+
+.boardContent {
+    background-color: #efefef;
+    height: 320px;
+    overflow-y: scroll;
+    padding: 6px;
+}

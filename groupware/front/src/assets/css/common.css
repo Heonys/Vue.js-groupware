@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: #ced4da;
+}
+
+div {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: "Malgun Gothic","맑은고딕","굴림","gulim","Helvetica","helvetica","sans-serif";
+    line-height: 100%;
+}
+
+input, textarea {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: "Malgun Gothic","맑은고딕","굴림","gulim","Helvetica","helvetica","sans-serif";
+    outline: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+.layout {
+    position: relative;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.layout-header {
+    position: relative;
+    height: 80px;
+    min-width: 1000px;
+}
+
+.layout-header h1 {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.layout-header .header-info {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+.layout-header .header-info p.user {
+    font-size: 12px;
+    color: #ffffff;
+    margin-right: 8px;
+}
+
+.layout-header .header-info p.user strong {
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+.layout-header .header-info p.user button.config {
+    border: none;
+    margin-right: 5px;
+}
+
+.layout-header .header-info p.user button.logout {
+    border: none;
+    margin-right: 5px;
+}
+
+.layout-header a {
+    background: url("@assets/images/logo_white3.png") no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 200px;
+    display: inline-block;
+}
+
+
+.layout-content {
+    position: relative;
+    height: calc(100% - 80px);
+    min-width: 1000px;
+}
+
+.layout-content.off .layout-nav {
+    width: 0;
+}
+
+.layout-content.off .layout-tabs {
+    left: 0;
+}
+
+.layout-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    bottom: 0;
+    background: #495057;
+    transition: all .5s ease-in-out;
+}
+
+.layout-tabs {
+    position: absolute;
+    top: 0;
+    left: 280px;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    transition: all .5s ease-in-out;
+}
+
+.layout-tabs .tab-content {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    height: 30px;
+}
+
+.tab-content button.resize-btn {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    border: none;
+}
+
+.tab-content button.close-tab-btn {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    border: none;
+}
+
+.tab-content .tab-list {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    right: 50px;
+    bottom: 0;
+}
+
+.tab-content .tab-container > div {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+.tab-content .tab-container > div > div {
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+}
+
+.tab-content .tab-container > div > div.tab-div a {
+    display: block;
+    color: #ffffff;
+    line-height: 30px;
+    background: #000000;
+    border-radius: 3px 3px 0 0;
+    vertical-align: top;
+    padding: 0 30px 0 10px;
+}
+
+.tab-content .tab-container > div > div.tab-div + button {
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    position: relative;
+    margin-left: -24px;
+    background: none;
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.tab-content .tab-container > div > div.tab-div.tab-active a {
+    color: #000000;
+    background: #ffffff;
+}
+
+.tab-content .tab-container > div > div.tab-div.tab-active + button {
+    color: #000000;
+}
+
+.tab-content .tab-container > div.tab-home div a {
+    padding: 0 10px 0 10px;
+}
+
+
+
+
+.layout-tabs .tabs-work {
+    height: 100%;
+}
+

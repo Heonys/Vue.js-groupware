@@ -1,0 +1,356 @@
+@charset "UTF-8";
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: #ced4da;
+}
+
+div {
+    font-size: 14px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    line-height: 100%;
+    padding: 0;
+    margin: 0;
+    color: #424242;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+a {
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+a:link a:visited a:active {
+    color: #424242;
+}
+
+a:hover {
+    color: black;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    line-height: 100%;
+}
+
+ul, ol, li, dl, dt, dd {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+strong {
+    font-weight: 700;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input, textarea, select, pre {
+    font-size: 14px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #424242;
+    outline: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+input[type="text"] {
+    border: 1px solid blue;
+    height: 28px;
+    padding: 0 10px 0 0 ;
+}
+
+th, td {
+    padding: 0;
+}
+
+th.center, td.center {
+    text-align: center !important;
+}
+
+td.left, td.left {
+    text-align: left !important;
+    padding-left: 10px !important;
+}
+
+th.right, td.right {
+    text-align: right !important;
+    padding-right: 10px !important;
+}
+
+.wrap {
+    position: relative;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: auto;
+    z-index: 0;
+}
+
+.header {
+    position: relative;
+    height: 76px;
+}
+
+.content {
+    position: relative;
+    height: calc(100% - 76px);
+}
+
+.navi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    background: #1C1612;
+    border-radius: 0 5px 0 0;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.tabs {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    bottom: 0;
+    right: 0;
+    background: white;
+    border-radius: 5px 0 0 0;
+    transition: all .5s ease-in-out;
+}
+
+.tabs .tabs_navi {
+    position: absolute;
+    top: -30px;
+    height: 30px;
+    left: 0;
+    width: 100%;
+}
+
+.tabs_navi button.navi_size {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: url("~@assets/images/navi_resize.png") center no-repeat;
+}
+
+.tabs_navi .v-tabs {
+    margin-left: 60px;
+    margin-right: 130px;
+}
+
+.tabs_navi .v-tabs__wrapper {
+    overflow: hidden;
+    contain: content;
+    display: flex;
+}
+
+.tabs_navi .v-tabs__container {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    transition: -webkit-transform .6s cubic-bezier(.86,0,.07,1);
+    transition: transform .6s cubic-bezier(.86,0,.07,1);
+    transition: transform .6s cubic-bezier(.86,0,.07,1), -webkit-transform .6s cubic-bezier(.86,0,.07,1);
+    white-space: nowrap;
+    position: relative;
+}
+
+.tabs_navi .v-tabs__container {
+    overflow: hidden;
+    font-size: 0;
+}
+
+.tabs_navi .v-tabs__container > div {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 5px;
+}
+
+.tabs_navi .v-tabs__container > div > div {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.tabs_navi .v-tabs__container > div > div.v-tabs__div a {
+    display: block;
+    color: white;
+    line-height: 30px;
+    background: #524740;
+    border-radius: 3px 3px 0 0;
+    vertical-align: top;
+    padding: 0 30px 0 30px;
+}
+
+.tabs_navi .v-tabs__container > div > div.v-tabs__div.v-tabs--active a {
+    color: #4D3D35;
+    background: white;
+}
+
+.tabs_navi .v-tabs__container > div.v-tabs__slider-wrapper {
+    display: none;
+}
+
+.tabs_navi .v-tabs__container > div.home div a {
+    padding: 0 10px 0 10px;
+}
+
+.tabs .tabs_page {
+    overflow-y: auto;
+    height: 100%;
+    padding: 110px 20px 0 20px;
+    box-sizing: border-box;
+}
+
+.tabs_page table th {
+    color: fuchsia !important;
+}
+
+.page_title {
+    position: absolute;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #827269;
+    padding: 35px 0 15px 0;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    background: white;
+    z-index: 1;
+}
+
+.page_title h2 {
+    font-size: 26px;
+    color: #424242;
+}
+
+.page_title ul {
+    position: absolute;
+    left: 0;
+    top: 10px
+}
+
+.page_title ul li {
+    display: inline-block;
+    background: url("~@assets/images/ioc_tit_arr.png") right center no-repeat;
+    padding-right: 20px;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.page_title ul li:last-child {
+    background: none;
+}
+
+
+
+.search_table {
+    margin-bottom: 25px;
+}
+
+.search_table > table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    table-layout: fixed;
+    border-top: 1px solid red;
+}
+
+.search_table > table > tbody > tr > th {
+    background: #F7F4F3;
+    text-align: center;
+    line-height: 18px;
+    height: 26px;
+    border-bottom: 1px solid red;
+}
+
+.search_table > table > tbody > tr > th.e {
+    background: #F7F4F3 url("@assets/images/th_e.png") left top no-repeat;
+}
+
+.search_table > table > tbody > tr > th + th {
+    border-left: 3px solid blue;
+}
+
+.search_table > table > tbody > tr > td {
+    text-align: left;
+    height: 26px;
+    padding: 7px 10px;
+    border-bottom: 1px solid red;
+}
+
+.search_table > table > tbody > tr > td input {
+    width: 100%;
+}
+
+
+.ly_con {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.ly_con > div {
+    display: table-cell;
+    padding-left: 20px;
+    vertical-align: top;
+}
+
+
+.con_title {
+    position: relative;
+    margin-bottom: 15px;
+    height: 19px;
+}
+
+.con_title h3 {
+    font-size: 18px;
+    padding-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url("@assets/images/ioc_con_tit.png") left center no-repeat;
+}
